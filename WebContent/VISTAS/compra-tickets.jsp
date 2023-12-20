@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
      <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
     <title>Adriano Caloni</title>
@@ -78,12 +78,12 @@
               </div>
             </div>
           </div>
-    </section>
+    </section><br>
 
     <section>
         <div id="tituloDelContenido">
-            <p>VENTA</p>
-            <h2>VALOR DE TICKET $200</h2> 
+            <h5 id="tipoLetraVengadores" >VENTA</h5>
+            <h2 id="tipoLetraVengadores" >VALOR DE TICKET $200</h2> 
         </div>
             <form class="containerForm" id="formularioCompraTickets" action="FrontController?accion=insert" method="post">
                 <div class="text-center">
@@ -137,7 +137,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="miModalLabel">Conf Bs.As - Los Vengadores</h5>
+        <h5 class="modal-title" id="tipoLetraVengadores">Conf Bs.As - Los Vengadores</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
        <div class="modal-body">
@@ -149,13 +149,12 @@
 		</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" onclick="borrarValor()" >Cancelar</button>
-        <button type="submit" class="btn btn-outline-success" onclick="return redireccionarInicio()">Aceptar</button>
-        
-        
+        <button type="submit" class="btn btn-outline-success">Aceptar</button>
       </div>
     </div>
   </div>
 </div>
+    
             </form>
     </section>
 </div>

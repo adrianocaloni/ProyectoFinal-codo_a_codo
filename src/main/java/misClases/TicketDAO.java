@@ -107,5 +107,31 @@ public class TicketDAO
 		}	
 		
 	}
+	
+	
+	//ACTUALIZAR
+
+	public void actualizarTicket(int id, String mail) 
+	{
+	    PreparedStatement ps;
+	    
+	    try 
+	    {
+	        ps = conexion.prepareStatement("UPDATE tickets SET  mail=?  WHERE id=?");    
+	        ps.setString(1, mail);  // Primero establece el valor para el parámetro mail
+	        ps.setInt(2, id);       // Luego establece el valor para el parámetro id
+	        ps.executeUpdate();
+	        
+
+	    } 
+	    catch (SQLException e) 
+	    {
+	        System.out.println(e);
+	
+	    }
+	}
+
+		
+	
 
 }

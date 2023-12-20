@@ -54,10 +54,13 @@ public class FrontController extends HttpServlet {
 			 dispatcher=request.getRequestDispatcher("VISTAS/compra-tickets.jsp");
 		 }
 		 
+		  
 		 else if(accion.equals("compraExitosa"))
 		 {
 			 dispatcher=request.getRequestDispatcher("VISTAS/compra-exitosa.jsp");
 		 }
+		 
+	
 		 
 		 else if(accion.equals("backoffice"))
 		 {
@@ -92,21 +95,30 @@ public class FrontController extends HttpServlet {
 			    Ticket ticket = new Ticket(0, nombre, apellido, mail, cant, categoria, valor_final);
 			    ticketDAO.insertarTicket(ticket);
 
-			    dispatcher = request.getRequestDispatcher("VISTAS/conferencia-index.jsp"); // Redirigir a la vista de compra exitosa
+			    dispatcher = request.getRequestDispatcher("VISTAS/compra-exitosa.jsp"); 
 		}
 		 
 		 else if(accion.equals("eliminar"))
 		 {
 			 int id=Integer.parseInt(request.getParameter("id"));
 			 ticketDAO.eliminarTicket(id);
-			 dispatcher=request.getRequestDispatcher("VISTAS/conferencia-index.jsp"); //Realizar alguna advertencia		 
+			 dispatcher=request.getRequestDispatcher("VISTAS/back-office.jsp"); 		 
+		 }
+		 
+		 else if(accion.equals("actualizar"))
+		 {
+			 	int id=Integer.parseInt(request.getParameter("id"));		
+			    String mail = request.getParameter("mail");
+
+			    ticketDAO.actualizarTicket(id, mail);
+			    dispatcher=request.getRequestDispatcher("VISTAS/back-office.jsp"); 		 
 		 }
 		 
 		 else if(accion.equals("eliminarOrador"))
 		 {
 			 int id=Integer.parseInt(request.getParameter("id"));
 			 oradorDAO.eliminarOrador(id);
-			 dispatcher=request.getRequestDispatcher("VISTAS/conferencia-index.jsp"); //Realizar alguna advertencia		 
+			 dispatcher=request.getRequestDispatcher("VISTAS/back-office.jsp"); 	 
 		 }
 		 		 
 		 else if(accion.equals("insertOrador"))

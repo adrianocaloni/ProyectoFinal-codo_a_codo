@@ -63,27 +63,36 @@ function borrarValor() {
 
 }
 
+function mostrarTotal() {
+    // Aquí deberías calcular el total y mostrarlo en el modal
+    var total = calcularTotal();
+    document.getElementById('totalAPagar').textContent = "$" + total.toFixed(2);
+}
 
-function redireccionarInicio() {
-	
-    // Muestra el mensaje de redirección en el modal
-    document.getElementById('miModalLabel').textContent = "Redirigiendo...";
-    document.getElementById('miModalLabel').style.color = "blue";  // Estilo para resaltar el mensaje
 
-    // Inicia el contador
-    var segundos = 5;
-    var intervalo = setInterval(function() {
-        document.getElementById('estasSeguro').textContent = "Redirigiendo en " + segundos + " segundos...";
-        segundos--;
+function setRecordId(id) {
+    document.getElementById('recordId').value = id;
+}
 
-        if (segundos < 0) {
-			
-            clearInterval(intervalo);  // Detiene el temporizador cuando llega a cero
-            
-            if(segundos == 0){}
-            window.location.href = "FrontController?accion=compraExitosa";  // Redirige al usuario a una nueva pagina
-        }
-    }, 1000);  // Actualiza cada segundo (1000 milisegundos)
-    
-    
+function setRecordEditId(id,nombre,apellido,tipo_ticket,mail) {
+	 console.log(id,nombre,apellido,mail,tipo_ticket)
+	 			    // Aplicar descuento según la categoría
+	if (tipo_ticket == 1) {
+		tipo_vengador = 'Vengador Original'
+	} else if (tipo_ticket == 2) {
+		tipo_vengador = 'Vengador Nuevo'
+	} else {
+	    tipo_vengador = 'Vengador Oscuro'
+	}
+	 
+     document.getElementById('recordIdEdit').value = id;
+     document.getElementById('nombre').value = nombre;
+     document.getElementById('apellido').value = apellido;
+     document.getElementById('tipoVengador').value = tipo_vengador;
+     document.getElementById('mail').value = mail;
+}
+
+function setRecordIdOrador(id) {
+        document.getElementById('recordIdOrador').value = id;
+        console.log(id)
 }

@@ -8,9 +8,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
     <title>Adriano Caloni</title>
 </head>
 <body>
@@ -57,13 +57,6 @@
 
 
 <main>
-<style>
-    .carousel-item video {
-        width: 100%;
-        height: 70vh;  /* Esto hace que ocupe el 50% del alto de la ventana del navegador */
-        object-fit: cover;  /* Esto asegura que el video cubra todo el espacio, manteniendo las proporciones */
-    }
-</style>
 
 <div id="carouselSlidesOnly" class="carousel slide position-relative d-flex align-items-center justify-content-end" data-bs-ride="carousel" data-bs-interval="13000">
   
@@ -85,13 +78,13 @@
   <div class="position-absolute text-end col-md-6 col-12 text-light px-5">
     <!-- Contenido para pantallas grandes -->
     <div class="d-none d-md-block pt-5 mt-5">
-      <h1>Conf Bs. As. Los Vengadores</h1>
+      <h1 id="tipoLetraVengadores" >Conf Bs. As. Los Vengadores</h1>
       <p>Los Vengadores llegan por primera vez a Argentina. Un evento épico para reunir a nuestra comunidad y celebrar el poder y la pasión de los héroes más poderosos de la Tierra. Ven a conocer a miembros del equipo de los Vengadores, a otros aficionados del universo Marvel y a los icónicos superhéroes que tenemos para ti. ¡Te esperamos en esta aventura inolvidable!</p>
     </div>
 
     <!-- Contenido para pantallas medianas -->
     <div class="d-none d-sm-block d-md-none text-center mt-5 textoctubreBuenosAires">
-      <h1>Los Vengadores</h1>
+      <h1 id="tipoLetraVengadores" >Los Vengadores</h1>
       <p>Los Vengadores llegan por primera vez a Argentina. Un evento épico para reunir a nuestra comunidad y celebrar el poder y la pasión de los héroes más poderosos de la Tierra. ¡Te esperamos!</p>
     </div>
 
@@ -102,7 +95,7 @@
 
     <!-- Botones de acción -->
     <div class="pt-1 d-grid gap-2 d-md-block">
-      <button type="button" class="btn btn-outline-light">Quiero ser vengador</button>
+      <a type="button" class="btn btn-outline-light"  href="#convierteteEnOrador">Quiero ser vengador</a>
       <a class="btn btn-success" href="FrontController?accion=registrar">Comprar tickets</a>
     </div>
   </div>
@@ -110,8 +103,8 @@
 
     <section class="container mb-4" id="losOradores">
         <div id="tituloDelContenido">
-            <p>CONOCE A LOS</p>
-            <h2>VENGADORES</h2> 
+            <h5 id="tipoLetraVengadores">CONOCE A LOS</h5>
+            <h2 id="tipoLetraVengadores">VENGADORES</h2> 
         </div>  
 
         <div class="row justify-content-center">
@@ -173,7 +166,7 @@
               <img src="IMG/img/vengadores.webp" alt="imgPlaya" style="width:100%" > 
           </div>
           <div class="col textoctubreBuenosAires">
-                <h3>Bs As - Los Vengadores</h3>
+                <h3 id="tipoLetraVengadores">Bs As - Los Vengadores</h3>
                 <p>                
 					Los Vengadores de Marvel son un equipo de superhéroes que se unen para proteger el mundo de amenazas demasiado grandes para enfrentarlas solos. Fundados originalmente por figuras icónicas como Iron Man, Thor, Hulk, Ant-Man y la Avispa, este grupo ha sido una piedra angular en el universo de Marvel Comics. Con el tiempo, el equipo ha evolucionado, incorporando a numerosos héroes de diferentes orígenes y poderes. Su misión principal es defender la Tierra de todo tipo de peligros, desde amenazas terrestres hasta desafíos cósmicos, y su lema, "Unidos luchamos, divididos caemos", refleja la importancia de la colaboración y el trabajo en equipo en su lucha contra el mal. Los Vengadores no solo son conocidos por sus heroicas acciones, sino también por las complejas relaciones entre sus miembros y las profundas historias que han surgido de su colaboración y conflicto.
                 </p>
@@ -185,24 +178,24 @@
     
     <section class="convierteteEnOrador"  id="convierteteEnOrador">
         <div id="tituloDelContenido">
-            <p>CONVIÉRTETE EN UN</p>
-            <h2>VENGADOR</h2> 
-            <p>Anótate como vengador para dar una <u>charla ignite.</u> Cuéntanos de qué quieres hablar!</p>
+            <h5 id="tipoLetraVengadores">CONVIÉRTETE EN UN</h5>
+            <h2 id="tipoLetraVengadores" >VENGADOR</h2> 
+            <p>Anótate como vengador para dar una <u>charla ignite.</u> Cuéntanos sobre tus habilidades!</p>
         </div>
         <form class="containerForm" action="FrontController?accion=insertOrador" method="post">
             <div class="text-center">
                 <div class="row">
                   <div class="col">
-                    <input type="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Nombre" name="nombre">
+                    <input type="text" class="form-control" id="nombreVengador" placeholder="Nombre y Apellido" name="nombre">
                   </div>
                   <div class="col">
-                    <input type="apellid" class="form-control" id="exampleFormControlInput1" placeholder="Apellido" name="apellido">
+                    <input type="text" class="form-control" id="apellidoVengador" placeholder="Nombre de superhéroe" name="apellido">
                   </div>
                 </div>
             </div>
               <div class="textarea mb-3">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Sobre qué quieres hablar?" name="tematica"></textarea>
-                <label for="exampleFormControlTextarea1" class="form-label">Recuerda incluir un títutlo para tu charla</label>
+                <textarea class="form-control" id="tematicaVengador" rows="3" placeholder="Cuales son tus poderes?" name="tematica"></textarea>
+                <label for="tematicaVengador" class="form-label">Recuerda incluir tus super poderes</label>
               </div>
               <div class="d-grid gap-2">
                 <button class="btn btn-success" type="submit">Enviar</button>
@@ -233,7 +226,6 @@
     </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta3/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
