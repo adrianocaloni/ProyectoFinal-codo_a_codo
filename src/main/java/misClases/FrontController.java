@@ -54,7 +54,7 @@ public class FrontController extends HttpServlet {
 			 dispatcher=request.getRequestDispatcher("VISTAS/compra-tickets.jsp");
 		 }
 		 
-		  
+
 		 else if(accion.equals("compraExitosa"))
 		 {
 			 dispatcher=request.getRequestDispatcher("VISTAS/compra-exitosa.jsp");
@@ -129,7 +129,7 @@ public class FrontController extends HttpServlet {
 			 
 			 Orador orador = new Orador(0,nombre,apellido,tematica);
 			 oradorDAO.insertarOrador(orador);
-			 dispatcher=request.getRequestDispatcher("VISTAS/conferencia-index.jsp"); //HACER UNA VISTA CUANDO LA CARGA DEL ORADOR FUE EXITOSA
+			 dispatcher=request.getRequestDispatcher("VISTAS/vengador-exitoso.jsp");
 		 }
 		 
 		 else if(accion.equals("volver"))

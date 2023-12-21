@@ -182,7 +182,7 @@
             <h2 id="tipoLetraVengadores" >VENGADOR</h2> 
             <p>Anótate como vengador para dar una <u>charla ignite.</u> Cuéntanos sobre tus habilidades!</p>
         </div>
-        <form class="containerForm" action="FrontController?accion=insertOrador" method="post">
+         <form class="containerForm" action="FrontController?accion=insertOrador" method="post">
             <div class="text-center">
                 <div class="row">
                   <div class="col">

@@ -215,3 +215,22 @@ p#totalFianl {
  #tipoLetraVengadores{
  font-family: 'Bangers', cursive; 
  }
+
+ .cartaVengadores {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 50px auto;
+        text-align: center;
+        background-color: #f9f9f9;
+         }
+         
+ #imagendeVengadoresOk {
+    border-radius: 10px; /* Esto redondeará los bordes de la imagen */
+    width: 40%; /* Esto ajustará el tamaño de la imagen al 50% de su tamaño original */
+    display: block; /* Esto garantiza que se apliquen las propiedades de tamaño correctamente */
+    margin: 0 auto; /* Esto centra la imagen horizontalmente */
+    margin-bottom: 25px;
+}
